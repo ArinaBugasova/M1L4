@@ -37,7 +37,7 @@ class Pokemon:
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            return (data['forms'][0]['url'])
+            return (data['abilities']["ability"]['name'])
         else:
             pass
     # Метод класса для получения информации
@@ -47,6 +47,6 @@ class Pokemon:
     def show_img(self):
         return self.img
     def po(self):
-        return self.po
+        return f"что-то там: {self.po}"
 
 
